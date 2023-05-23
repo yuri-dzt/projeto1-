@@ -1,0 +1,112 @@
+#contact {
+    @include section;
+    background-color: $light-color;
+    padding: 0;
+    z-index: 999999;
+
+    .all {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+
+        .informations {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background-color: $grey-color;
+            cursor: pointer;
+
+            .link {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 4rem 2rem;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    border-left: 2px solid $primary-color;
+                    border-right: 2px solid $primary-color;
+                    background-color: $primary-color-variant;
+                }
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem 0;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                    p {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $dark-color;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    #contact {
+        @include section;
+        background-color: $light-color;
+        padding: 0 !important;
+
+        .all {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+
+            .informations {
+                display: grid;
+                grid-template-columns: 1fr;
+                background-color: $grey-color;
+                cursor: pointer;
+
+                .link {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 5rem 2rem;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        border: none;
+                    }
+
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1.5rem 0;
+
+                        img {
+                            width: 60px;
+                            height: 60px;
+                        }
+                        p {
+                            font-size: 22px;
+                            font-weight: 600;
+                            color: $dark-color;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

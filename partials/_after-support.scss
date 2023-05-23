@@ -1,0 +1,59 @@
+#after-support {
+    @include section;
+    background-color: $light-color;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0 5rem;
+        place-items: center;
+
+        .box {
+            position: relative;
+            overflow: visible;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            z-index: 999;
+
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                width: calc(100% + 10px);
+                height: calc(100% + 10px);
+                background: linear-gradient(
+                    45deg,
+                    #1b263b,
+                    #415a77,
+                    #0d1b2a,
+                    #000837,
+                    #5a0000,
+                    #1b263b,
+                    #415a77,
+                    #0d1b2a,
+                    #000837,
+                    #5a0000,
+                );
+                z-index: -1;
+                background-size: 300%;
+                border-radius: 8px;
+                animation: AnimarBorda 5s infinite linear;
+
+                img {
+                    z-index: 999;
+                    border-radius: 16px;
+                    backdrop-filter: blur(15px);
+                    background: rgba(255, 255, 255, 0.15);
+                    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+                    -webkit-backdrop-filter: blur(15px);
+                }
+            }
+            &::after{
+                filter: blur(20px);
+            }
+
+        }
+    }
+}

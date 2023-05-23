@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    font-family: "Dosis", sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    resize: none;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        background-color: #778da9;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #415a77;
+        border-radius: 3px;
+    }
+}
+
+$primary-color: #1b263b;
+$primary-color-variant: #415a77;
+$dark-color: #0d1b2a;
+$grey-color: #778da9;
+$light-color: #e0e1dd;
+$other-color: #000837;
+
+h1,p,h2,h3 {
+    visibility: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    display: flex;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+}
+
+.container {
+    width: 80%;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 83%;
+    }
+}
+@media (min-width: 100rem) {
+    .container {
+        width: 60%;
+    }
+}
+
+@keyframes animar {
+    0% {
+        transform: translateY(60vh) scale(0.08);
+    }
+    100% {
+        transform: translateY(-60vh) scale(0.1);
+    }
+}
+
+@keyframes animar1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+@keyframes animar2 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+@keyframes animar3 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes animar4 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes AnimarBorda {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 300%;
+    }
+}

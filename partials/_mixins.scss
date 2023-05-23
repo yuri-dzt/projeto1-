@@ -1,0 +1,52 @@
+@mixin section{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 0;
+
+    @media (max-width: 1024px) {
+        padding: 4.5rem 0;
+    }
+}
+
+@mixin sectionImg($height, $background, $backgroundMoblie) {
+    width: 100%;
+    height: $height;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    background-image: url($background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (max-width: 64rem){
+        background-image: url($backgroundMoblie);
+    }
+}
+
+@mixin btn($color, $background-color) {
+    width: 140px;
+    height: 36px;
+    border-radius: 9px;
+    display: grid;
+    place-items: center;
+    font-size:12px ;
+    font-weight: 500;
+    color: $color;
+    background-color: $background-color;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover{
+        transform: translateY(-3px);
+        color: $background-color;
+        border: none;
+        background-color:$color;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+}

@@ -1,0 +1,42 @@
+footer {
+    @include section;
+    padding: 3rem 0;
+    background-color: $dark-color;
+    position: relative;
+    height: 12rem;
+   
+
+    .bolhas {
+        position: absolute;
+        display: flex;
+
+        span {
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: $light-color;
+            margin: 0 4px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 10px #e0e1dd44, 0 0 50px #e0e1dd, 0 0 100px #e0e1dd;
+            animation: animar calc(200s / var(--i)) linear infinite;
+
+            &:nth-of-type(even) {
+                background-color: $grey-color;
+                box-shadow: 0 0 0 10px #778da944, 0 0 50px #778da9, 0 0 100px #778da9;
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}

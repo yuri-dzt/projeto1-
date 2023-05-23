@@ -1,0 +1,202 @@
+#about {
+    @include section;
+    background-color: $dark-color;
+
+    .bolhas{
+        position: absolute;
+        display: flex;
+        
+        
+        span{
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: $light-color;
+            margin: 0 4px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 10px #e0e1dd44,
+            0 0 50px  #e0e1dd,
+            0 0 100px  #e0e1dd;
+            animation: animar calc(200s/var(--i)) linear infinite ;
+
+            &:nth-of-type(even){
+                background-color: $grey-color;
+                box-shadow: 0 0 0 10px #778da944,
+                0 0 50px  #778da9,
+                0 0 100px  #778da9;
+            }
+        }
+        
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        place-items: center;
+        gap: 0 5rem;
+        padding: 0 7%;
+        position: relative;
+
+        .btn{
+            width: 100%;
+            
+            a{
+                button{
+                    @include btn($primary-color-variant,$light-color);
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .circle1{
+            width: 75px;
+            height: 75px;
+            background-color: $light-color;
+            position: absolute;
+            display: flex;
+            border-radius: 50%;
+            z-index: 999;
+            top: -70px;
+            left: 70px;
+        }
+        .circle2{
+            width: 75px;
+            height: 75px;
+            background-color: $light-color;
+            position: absolute;
+            display: flex;
+            border-radius: 50%;
+            z-index: 999;
+            bottom: -70px;
+            right: 0;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            overflow: hidden;
+            height: 300px;
+            border-radius: 18px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .all {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            gap: 2rem 0;
+
+            .title {
+                width: 100%;
+                border-left: 4px solid $dark-color;
+                padding-left: 1rem;
+                h1 {
+                    color: $grey-color;
+                    font-size: 28px;
+                }
+                h2 {
+                    font-size: 23px;
+                    color: $primary-color-variant;
+                }
+            }
+            .text {
+                p {
+                    color: $light-color;
+                    font-size: 18px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1024px){
+    #about {
+        @include section;
+        background-color: $dark-color;
+    
+        .bolhas{
+            position: absolute;
+            display: flex;
+            
+            
+            span{
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: $light-color;
+                margin: 0 4px;
+                border-radius: 50%;
+                box-shadow: 0 0 0 10px #e0e1dd44,
+                0 0 50px  #e0e1dd,
+                0 0 100px  #e0e1dd;
+                animation: animar calc(200s/var(--i)) linear infinite ;
+    
+                &:nth-of-type(even){
+                    background-color: $grey-color;
+                    box-shadow: 0 0 0 10px #778da944,
+                    0 0 50px  #778da9,
+                    0 0 100px  #778da9;
+                }
+            }
+            
+        }
+    
+        .container {
+            display: grid;
+            grid-template-columns:1fr;
+            place-items: center;
+            gap: 3rem 0;
+            padding: 0 0%;
+            position: relative;
+    
+            .circle1{
+               display: none;
+            }
+            .circle2{
+              display: none;
+            }
+    
+            img {
+                width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                height: 300px;
+                border-radius: 18px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+    
+            .all {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+                gap: 1rem 0;
+    
+                .title {
+                    width: 100%;
+                    border-left: 4px solid $dark-color;
+                    padding-left: 0rem;
+                    h1 {
+                        color: $grey-color;
+                        font-size: 28px;
+                    }
+                    h2 {
+                        font-size: 23px;
+                        color: $primary-color-variant;
+                        line-height: 1.5;
+                    }
+                }
+                .text {
+                    p {
+                        color: $light-color;
+                        font-size: 18px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
